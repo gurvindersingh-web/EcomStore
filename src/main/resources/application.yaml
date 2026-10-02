@@ -3,18 +3,17 @@ spring:
     name: EcomStore
 
   #Database information
-  spring:
-    datasource:
-      url: jdbc:postgresql://localhost:5432/springdb
-      username: springuser
-      password: springpassword
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springdb
+    username: springuser
+    password: springpassword
 
-    #ORM configuration
-    #Hibernate
-    jpa:
+  #ORM configuration
+  #Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
       hibernate:
-        ddl-auto: update
-      show-sql: true
-      properties:
-        hibernate:
-          format_sql: true
+        format_sql: true
